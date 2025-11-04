@@ -1,0 +1,8 @@
+- The user wants the code and comments' language to be in English
+- The user wants the chat language to be in Chinese
+- When working on Python code, check for a managed environment (`.venv`, `.venv/pyvenv.cfg`, or `uv.lock`). If it exists **and** `uv` is available, prefer `uv` over `pip`/`venv` for all environment-aware tasks:
+  - Use `uv pip install` (or `uv pip sync` with a lock file) instead of `pip install`.
+  - Use `uv run <command>` for formatting, linting, tests, or scripts so they execute inside the environment without manual activation.
+  - If both `uv` and a traditional toolchain (pip/poetry/pipenv) are detected, follow `uv` unless the user explicitly requests otherwise.
+  - If `uv` is not installed, attempt installation via the official script or the platform’s package manager (e.g. `curl -LsSf https://astral.sh/uv/install.sh | sh` on Unix-like systems, `irm https://astral.sh/uv/install.ps1 | iex` on PowerShell). Only when installation is unavailable or fails should you state that explicitly and fall back to the existing workflow.
+- Use `ruff` for linting/formatting Python code. When `uv` is present, install and invoke it via `uv run ruff ...` (install with `uv tool install ruff` or ensure it’s part of the project dependencies). Without `uv`, install with the project’s existing toolchain (e.g. `pip install ruff`) and run `ruff check`/`ruff format` directly. Always mention if installation is skipped or falls back.
