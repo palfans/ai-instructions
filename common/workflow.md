@@ -49,5 +49,5 @@
 ## Special Tasks & Tools
 - **API / Dependency Research**: When integrating or recommending third-party tools, fetch the current official documentation, rely on the freshest information, and cite it explicitly.
 - **Prompt Writing**: Output prompts in Markdown. When sending a prompt directly in chat, wrap it in triple backticks.
-- **Git**: Stage/commit only when the user requests it. Never perform implicit commits.
+- **Git**: Stage/commit only when the user requests it. Never perform implicit commits. Follow `https://www.conventionalcommits.org/` to add commit messages.
 - **Summaries**: If asked to summarize, append a concise entry to the shared memory file using the required front matter format.
