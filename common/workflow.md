@@ -21,7 +21,7 @@
      - `exa-get_code_context_exa` is required for any coding/API task to surface up-to-date usage patterns.
      - `context7-resolve-library-id` followed by `context7-get-library-docs` provides official references for third-party libraries.
      - `deepwiki-*` endpoints supply repository-specific docs and question answering.
-     - LightRAG endpoints (e.g., `lightrag-mcp-query_document`) surface project-tailored knowledge bases.
+     - LightRAG endpoints (e.g., `rag-*`) surface project-tailored knowledge bases.
      - `exa-web_search_exa` broadens web search; `fetch-fetch` retrieves specific URLs for detailed review.
    - If the `bqqq` MCP or any of the required endpoints are absent, note the gap and advise configuring the missing MCP before proceeding.
    - Only when the above sources fail to produce sufficient information, search DuckDuckGo via `https://html.duckduckgo.com/html/?q=...`, falling back to Bing at `https://www.bing.com/search?q=...` if the first endpoint is blocked.
